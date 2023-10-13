@@ -1,0 +1,7 @@
+<%= turbo_stream_from(:parties) %>
+
+<main class="flex-col">
+  <%= turbo_frame_tag "parties" do %>
+    <%= render @parties %>
+  <% end %>
+</main>
