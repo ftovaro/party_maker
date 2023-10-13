@@ -1,0 +1,9 @@
+<div class="flex-col">
+  <h1><%= @party.date.strftime('%b %d') %></h1>
+  <%= turbo_stream_from @party %>
+  <%= turbo_frame_tag "party_#{@party.id}_polls_container" do %>
+    <% @party.polls.each do |poll| %>
+      <%= render poll %>
+    <% end %>
+  <% end %>
+</div>

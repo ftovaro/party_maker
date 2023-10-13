@@ -1,0 +1,7 @@
+<h2><%= poll.name %></h2>
+
+<%= turbo_frame_tag "poll_#{poll.id}_items_container" do %>
+  <% poll.items.each do |item| %>
+    <%= render item %>
+  <% end %>
+<% end %>

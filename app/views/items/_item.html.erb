@@ -1,0 +1,9 @@
+<%= turbo_frame_tag item do %>
+  <%= button_to "#{item.label} => #{item.votes.count}",
+        votes_path(
+          user_id: 1,
+          item_id: item.id
+        ),
+        method: :post %>
+<% end %>
+
